@@ -1,0 +1,1119 @@
+* {
+
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+  
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-color:#FFF2F2;
+  
+  }
+  :root {
+    --header-height: 3rem;
+
+    --first-color: #5B65F5;
+    --first-color-light: #C4C7F5;
+    --dark-color: #0E1026;
+    --white-color: #FBFBFB;
+
+    --body-font: 'Open Sans', sans-serif;
+    --nav-name-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+
+    --z-fixed: 100;
+  }
+
+/*logo*/
+.scallop{
+  background-color: #FFF2F2;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.navbar {
+  background-color: #7886C7;
+  width: 100%;
+  overflow: hidden;
+  color: #FFF2F2;
+  text-align: center;
+  padding: 2px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/*stick navbar*/
+.sticky {
+  position: fixed;  
+  top: 0;    
+  left: 0;
+  right: 0;     
+  width: 100%;  
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: top 1s
+} 
+
+.nav-list li {
+    display: inline-flex;
+    list-style: none;
+    list-style-type: none;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #FFF2F2;
+  font-weight: normal;
+  font-size: 30px;
+  transition: color 0.3s ease-in-out;
+  margin-right: 45px;
+}
+
+/*bold active link when hover*/
+.nav-list li a:hover {
+  text-decoration: none;
+  color: #FFF2F2;
+  font-weight: bold;
+  font-size: 30px;
+  transition: color 0.3s ease-in-out;
+  margin-right: 45px;
+}
+
+.topnav a:hover {
+  color: white;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/*dropdown*/
+.dropdown-content {
+  display: none;
+  position: relative absolute;
+  background-color: #7886C7;
+  min-width: 65px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dropdown-content a:hover {
+  float: none;
+  font-weight: bold;
+  color: #FFF2F2;
+  padding: 4px 4px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a {
+  float: none;
+  font-weight: normal;
+  color: #FFF2F2;
+  padding: 4px 4px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.scallop {
+  position: relative;
+  background: #FFF2F2;
+  padding:30px;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.scallop img {
+  width: 472px;
+  height: 132px;
+  object-fit: cover;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*scalloped border above navbar*/
+.scallop::after { 
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  width: 100%;
+  content:" ";
+  background: 
+  radial-gradient(circle at 50% 0%, #FFF2F2 25%, #7886C7 26%, #7886C7 40%);
+  background-color: #FFF2F2;
+  background-size:50px 100px;
+  height:40px;
+  background-repeat: repeat-x;
+}
+
+.after-scallop{
+  background: #7886C7;
+  padding:5px;
+  margin-bottom:0px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+/*section of slideshow recipes*/
+.main {
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
+.front-page-recipe {
+  margin: 0px auto;
+  padding: 10px 35px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container-front {
+  opacity: 1;
+  display: inline-block;
+  transition: .3s ease;
+  backface-visibility: hidden;
+  text-align: center;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.image {
+  display: block;
+}
+
+/*background parallax behind slideshow*/
+.parallax {
+  background-image: url('https://i.pinimg.com/736x/cd/47/3e/cd473e8225911e026cf52803f98f19f3.jpg');
+
+  height: 650px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*read now text on the image, has a slight transition effect*/
+.middle {
+  transition: .3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.image-container-front:hover .image {
+  opacity: 0.4;
+}
+
+.image-container-front:hover .middle {
+  opacity: 1;
+}
+
+.middle .text h2{
+  color: #7886C7;
+  font-size: 80px !important;
+  font-weight: bold;
+  line-height: 80px !important;
+  text-align: center;
+  font-weight: normal;
+}
+
+.front-page-recipe a {
+  text-decoration: none;
+}
+
+.front-page-recipe-text {
+  float: left;
+  margin-right: 60px;
+}
+
+.JUST-IN {
+  margin-top: 40px;
+  color: #A9B5DF;
+}
+
+.front-page-recipe h1 {
+  color: #2D336B;
+  font-size: 70px;
+  line-height: 70px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.front-page-recipe h1:hover {
+  color: #A9B5DF;
+  font-size: 70px;
+  line-height: 70px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.front-page-recipe h2 {
+  color: #7886C7;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.main-recipe-desc:hover {
+  color: #A9B5DF;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+/*scallop border around the slideshow images*/
+.front-page-recipe img {
+  margin-top: 30px;
+  width: 460px; 
+  height: 450px; 
+  object-fit: cover;
+  display: block;
+  position: right;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  --r: 20px; /* radius of circles */
+  height: 500px;
+  aspect-ratio: 1;
+  padding: calc(1.5*var(--r));
+  background: #A9B5DF;
+  mask: 
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)), 
+    radial-gradient(farthest-side,#000 97%,#0000) 
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
+}
+
+/*parallax behind about section*/
+.about-parallax {
+  background-image: url('https://i.pinimg.com/736x/c5/a1/6c/c5a16c31c1cb66989b47e23456bb28c0.jpg');
+
+  height: auto; 
+  width: 100% !important;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 30px 30px;
+  border-radius: 25px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-parallax-text {
+  display: inline-flex;
+  align-items: center;
+  height: 400px;
+  width: 96.7%;
+  position: relative;
+  background-color: rgba(255, 242,	242, 0.6);
+  padding-left: 50px;
+  padding-bottom: 50px;
+  padding-top: 0px;
+  margin: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 25px;
+  border: 4px solid #A9B5DF;
+}
+
+.center-about-parallax-inside {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-parallax-text h2 {
+  color: #2D336B;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: left !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.about-parallax-text p{
+  color: #2D336B;
+  text-align: left !important;
+  position: center;
+  margin-right: 40px;
+}
+
+/*functional learn more button that directs to about page*/
+.learn-more-button h3 {
+  float: center;
+  color:#FFF2F2;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 65px;
+}
+
+.learn-more-button {
+  margin-top: 50px;
+  display: block;
+  float: right;
+  position: relative;
+  width: 200px; 
+  aspect-ratio: 1;
+  background-color: #2d336B;
+  --g:/15.522% 15.522% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: 100% 50% var(--g),96.624% 68.062% var(--g),86.95% 83.685% var(--g),72.287% 94.758% var(--g),54.613% 99.787% var(--g),36.317% 98.091% var(--g),19.868% 89.901% var(--g),7.489% 76.322% var(--g),0.851% 59.187% var(--g),0.851% 40.813% var(--g),7.489% 23.678% var(--g),19.868% 10.099% var(--g),36.317% 1.909% var(--g),54.613% 0.213% var(--g),72.287% 5.242% var(--g),86.95% 16.315% var(--g),96.624% 31.938% var(--g),radial-gradient(100% 100%,#000 41.519%,#0000 calc(41.519% + 1px));
+}
+
+.learn-more-button:hover {
+  margin-top: 50px;
+  display: block;
+  float: right;
+  position: relative;
+  width: 200px; 
+  aspect-ratio: 1;
+  background-color: #A9B5DF;
+  --g:/15.522% 15.522% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: 100% 50% var(--g),96.624% 68.062% var(--g),86.95% 83.685% var(--g),72.287% 94.758% var(--g),54.613% 99.787% var(--g),36.317% 98.091% var(--g),19.868% 89.901% var(--g),7.489% 76.322% var(--g),0.851% 59.187% var(--g),0.851% 40.813% var(--g),7.489% 23.678% var(--g),19.868% 10.099% var(--g),36.317% 1.909% var(--g),54.613% 0.213% var(--g),72.287% 5.242% var(--g),86.95% 16.315% var(--g),96.624% 31.938% var(--g),radial-gradient(100% 100%,#000 41.519%,#0000 calc(41.519% + 1px));
+}
+
+/*section to browse different kinds of recipes*/
+.browse-parallax {
+  background-image: url('https://i.pinimg.com/736x/3c/6a/5c/3c6a5cdb548251ee3614ec65d9d66450.jpg');
+
+  height: auto; 
+  width: 100% !important;
+  border-radius: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 0.1px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  height: 80px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(255, 242,	242, 0.6);
+  border: 4px solid #A9B5DF;
+  cursor: pointer;
+}
+
+button:hover {
+  height: 80px;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(255, 242,	242, 0.4);
+  border: 4px solid #A9B5DF;
+}
+
+button:hover a {
+  font-weight: bold;
+}
+
+.browse-buttons {
+  margin-top: 20px;
+}
+
+.browse-types h2 {
+  color: #2D336B;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.browse-types a {
+  text-decoration: none;
+  color: #2D336B;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  transition: color 0.3s ease-in-out;
+}
+
+/*suggested recipes on index page*/
+.suggestions {
+  margin: 0px auto;
+  padding: 10px 35px;
+  font-size: 30px;
+  text-decoration: none;
+  display: block;
+  line-height: 12px;
+}
+
+.suggestions a {
+  text-decoration: none;
+}
+
+.suggestions h2 {
+  color: #2D336B;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.suggestions p {
+  color: #2D336B;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.suggestions-group ul {
+  margin-top: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+
+/*captions for suggested recipes*/
+.suggestions-group li figure figcaption a {
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 30px;
+  color: #2D336B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.suggestions-group li figure figcaption a:hover {
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 30px;
+  color: #2D336B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/*scalloped shaped recipe images*/
+.suggestions-group li figure img {
+  border-radius: 50%;
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1;
+  --g:/13.528% 13.528% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: 100% 50% var(--g),97.553% 65.451% var(--g),90.451% 79.389% var(--g),79.389% 90.451% var(--g),65.451% 97.553% var(--g),50% 100% var(--g),34.549% 97.553% var(--g),20.611% 90.451% var(--g),9.549% 79.389% var(--g),2.447% 65.451% var(--g),0% 50% var(--g),2.447% 34.549% var(--g),9.549% 20.611% var(--g),20.611% 9.549% var(--g),34.549% 2.447% var(--g),50% 0% var(--g),65.451% 2.447% var(--g),79.389% 9.549% var(--g),90.451% 20.611% var(--g),97.553% 34.549% var(--g),radial-gradient(100% 100%,#000 42.704%,#0000 calc(42.704% + 1px));
+}
+
+.suggestions-group li {
+  display: inline-block;
+  margin-right: 7px; 
+}
+
+.suggestions-group li figure {
+  text-align: center;
+}
+
+/*footer logo*/
+.footer-info img {
+  margin-top: 10px;
+  margin-left: 0px;
+  object-fit: cover;
+  display: block;
+  height: 80px;
+  width: 300px;
+  background-color: #2D336B; 
+  margin-right: 1400px;
+}
+
+.footer h2 {
+  text-align: right;
+  color: #FFF2F2;
+  background-color:#2d336B;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-weight: normal;
+  float: right;
+}
+
+.footer-info {
+  display: flex;
+  text-align: right;
+  background-color: #2D336B;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+footer {
+  background-color: #2D336B;
+  max-width: 100%;
+}
+
+/*recipe page*/
+
+.recipe-parallax {
+  background-image: url('https://i.pinimg.com/736x/de/4f/a5/de4fa574023b720316fa357045e3746b.jpg');
+
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*recipe galleries*/
+.recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.bread-recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.cookies-recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.cakes-recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.pastries-recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.gf-recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.vegan-recipe-gallery h2 {
+  color: #2D336B;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 60px !important;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.gallery {
+  border: 4px solid #A9B5DF;
+  border-radius: 20px; /*rounded corners*/
+  padding: 8px;
+  margin-bottom: 14px;
+  background-color: rgba(255, 242,	242, 0.6);
+}
+
+/*hover creates zoomed transition effect and less opaque background*/
+.gallery:hover {
+  border: 4px solid #2D336B;
+  padding: 11px;
+  margin-bottom: 14px;
+  background-color: rgba(255, 242, 242, 0.2); 
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.desc h3 {
+  color: #2D336B;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.gallery a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 16.55555%;
+  display: block;
+}
+
+.bread-recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 19.99999%;
+}
+
+.cookies-recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.cakes-recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 16.55555%;
+}
+
+.pastries-recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 19.99999%;
+}
+
+.gf-recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.vegan-recipe-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*gallery images with scalloped borders*/
+.gallery-scallop {
+  object-fit: cover;
+  display: block;
+  --r: 15px; 
+  aspect-ratio: 1;
+  padding: calc(1.5*var(--r));
+  background: #A9B5DF;
+  mask: 
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)), 
+    radial-gradient(farthest-side,#000 97%,#0000) 
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
+}
+
+.gallery:hover .gallery-scallop{
+  object-fit: cover;
+  display: block;
+  --r: 15px; 
+  aspect-ratio: 1;
+  padding: calc(1.5*var(--r));
+  background: #2D336B;
+  mask: 
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)), 
+    radial-gradient(farthest-side,#000 97%,#0000) 
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
+}
+
+/* tips page */
+
+/*uses same gallery format*/
+.tips-gallery h2 {
+  color: #2D336B;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.tips-gallery p {
+  color: #2D336B;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.tips-gallery .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.gallery-tips {
+  border: 4px solid #A9B5DF;
+  border-radius: 20px;
+  padding: 8px;
+  margin-bottom: 14px;
+  background-color: rgba(255, 242,	242, 0.6);
+}
+
+.gallery-tips:hover {
+  border: 4px solid #2D336B;
+  padding: 8px;
+  margin-bottom: 14px;
+  background-color: rgba(255, 242, 242, 0.2);
+}
+
+.gallery-tips a {
+  color: #2D336B;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.tips-parallax {
+    background-image: url('https://i.pinimg.com/736x/1e/ae/49/1eae490d5ef25f8917bda4f850769d28.jpg');
+  
+    height: 100% !important; 
+    margin-top: 0px !important;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* about page */
+
+.about-page-parallax {
+  background-image: url('https://i.pinimg.com/736x/c5/a1/6c/c5a16c31c1cb66989b47e23456bb28c0.jpg');
+
+  height: 650px; 
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 30px 30px;
+  border-radius: 25px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-page-parallax-text {
+  align-items: right;
+  float: top;
+  height: 540px;
+  width: 96.7%;
+  position: relative;
+  background-color: rgba(255, 242,	242, 0.6);
+  padding-left: 60px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  margin: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 25px;
+  border: 4px solid #A9B5DF;
+}
+
+.center-about-page-parallax-inside {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-page-parallax-left {
+  width: 50%;
+}
+
+.about-page-parallax-left h2 {
+  color: #2D336B;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: left !important;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  width: 100%
+}
+
+.about-page-parallax-text .about-page-parallax-left p {
+  color: #2D336B;
+  text-align: left !important;
+  position: center;
+  margin-right: 0px;
+  font-size: 30px;
+  font-weight: 30px;
+  line-height: 30px;
+  width: 50%;
+}
+
+.about-page-parallax-text .about-page-parallax-left a {
+  text-decoration: none;
+  color: #2D336B;
+}
+
+.about-page-parallax-text .about-page-parallax-left a:hover {
+  text-decoration: none;
+  color: #A9B5DF;
+}
+
+.about-page-parallax-text p{
+  color: #2D336B;
+  text-align: right !important;
+  position: center;
+  margin-right: 0px;
+  font-size: 30px;
+  font-weight: 30px;
+  line-height: 30px;
+  width: 50%;
+}
+
+/* matcha cinnamon roll recipe page */
+
+.matcha-cinnamon-roll-recipe {
+  padding: 90px;
+}
+
+.title-matcha-rolls {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-matcha-rolls a {
+  text-align: center !important;
+  color: #2D336B;
+  text-decoration: none;
+}
+
+.title-matcha-rolls a:hover {
+  text-align: center !important;
+  color: #A9B5DF;
+  text-decoration: none;
+}
+
+.matcha-rolls-ingredients-list img {
+  float: right;
+  margin: 100px 20px 20px 20px;
+}
+
+.matcha-rolls-ingredients-list ul {
+ margin-left: 37%;
+}
+
+.matcha-rolls-ingredients-list h3 {
+ margin-left: 37%;
+}
+
+.matcha-cinnamon-roll-recipe h2 {
+  color: #2D336B;
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/*embedded youtube video*/
+iframe {
+  margin-top: 30px;
+  margin-left: 28%;
+}
+
+.matcha-cinnamon-roll-recipe h3 {
+  color: #2D336B;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.matcha-cinnamon-roll-recipe li {
+  color: #2D336B;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7886C7;
+  }
+  
+  h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7886C7;
+  }
+  
+  p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7886C7;
+
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  
+  @media (max-width: 600px) {
+  
+    .grid-container  {
+  
+      grid-template-areas: 
+  
+        'header header header header header header' 
+  
+        'left left left left left left' 
+  
+        'middle middle middle middle middle middle' 
+  
+        'right right right right right right' 
+  
+        'footer footer footer footer footer footer';
+  
+    }
+  
+  }

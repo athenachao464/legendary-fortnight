@@ -1,0 +1,727 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>flour power</title>
+        <link rel="stylesheet"  type="text/css" href="stylesheet.css">
+        <script type="text/javascript" src="myscripts.js"></script>
+    </head>
+    <body>
+      <div class="scallop"><img src="https://i.pinimg.com/736x/ea/ed/64/eaed645d466d786c1af4219a49223eb0.jpg"></div>
+      <div class="after-scallop">
+    <nav class="navbar">
+        <h2>
+        <ul class="nav-list">
+        <li><a class="active" href="index.html">home</a></li>
+        <div class="dropdown">
+        <li><a class="dropbtn" href="recipes.html">all recipes
+            </a></li>
+            <div class="dropdown-content">
+                <a href="recipes.html#bread">bread</a>
+                <a href="recipes.html#cookies">cookies</a>
+                <a href="recipes.html#cakes">cakes</a>
+                <a href="recipes.html#pastries">pastries</a>
+                <a href="recipes.html#gf">gluten free</a>
+                <a href="recipes.html#vegan">vegan</a>
+            </div>
+            </div>
+        <div class="dropdown">
+        <li><a class="dropbtn" href="tips.html">tips & tricks
+            </a></li>
+
+            <div class="dropdown-content">
+                <a href="tips.html#substitutions">substitutions</a>
+                <a href="tips.html#techniques">techniques</a>
+            </div>
+            </div>
+        <li><a href="about.html">about</a></li>
+        </ul>
+        </h2>
+    </nav>
+</div>
+
+<script>
+    window.onscroll = function() {requestAnimationFrame(stickyAfterScallop)};
+    
+    var afterScallop = document.querySelector(".after-scallop");  
+    function stickyAfterScallop() {
+        
+        if (!afterScallop) return;  
+    
+        var afterScallopPosition = afterScallop.getBoundingClientRect().top;
+        var scrollY = window.scrollY || window.pageYOffset;  
+    
+        if (scrollY === 0 ) {
+            afterScallop.classList.remove("sticky"); 
+    
+        } else if (afterScallopPosition <= 0) {
+            afterScallop.classList.add("sticky");  
+    
+        } else {
+            afterScallop.classList.remove("sticky");  
+        }
+    }
+</script>
+
+<div class="recipe-parallax"> <!--parallax background-->
+<div class="recipe-gallery">
+    <h2>all recipes</h2>
+    <!--all recipe gallery-->
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="matcha-cinnamon-rolls.html">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/8b/ed/4a/8bed4a462329e3372b4a9006dcd9134a.jpg">
+            <div class="desc"><h3>matcha<br>cinnamon rolls</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://theloopywhisk.com/2018/10/14/ultimate-gluten-free-chocolate-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/4f/ae/12/4fae12d79ee7e7095d79c46273cf773b.jpg">
+          <div class="desc"><h3>gluten-free<br>chocolate cake</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.stetted.com/copycat-starbucks-sugar-plum-cheese-danish/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/05/7c/87/057c87840959433099b780b655b389c7.jpg">
+          <div class="desc"><h3>sugarplum<br>cheese danishes</h3></div>
+        </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://sofiabakes.com/2018/06/11/salted-caramel-raspberry-chocolate-cupcakes/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/94/ae/f2/94aef21e0226a955fd51e5de02ee495f.jpg">
+          <div class="desc"><h3>raspberry<br>cupcakes</h3></div>
+        </a>
+        </div>
+      </div> 
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://teakandthyme.com/mini-lemon-meringue-tarts/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/75/45/57/754557ed3d5d882e10ea056be66ccbb5.jpg">
+          <div class="desc"><h3>mini lemon meringue tartlets</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://theviewfromgreatisland.com/blackberry-sweet-rolls-recipe/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/12/53/53/1253533bd2b12fe458926b3d257d616c.jpg">
+          <div class="desc"><h3>blackberry<br>sticky buns</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.abc.net.au/news/2020-09-24/cinnamon-scrolls-with-cardamom-and-lemon-zest/12686306">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/a2/d0/1c/a2d01cb3c7ef4e0a928465f1796300ee.jpg">
+          <div class="desc"><h3>spiced<br>cinnamon scrolls</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.browneyedbaker.com/mocha-cupcakes-with-espresso-buttercream-frosting/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/02/7d/8b/027d8bb0d6b6cde8347c9ac1280e79f7.jpg">
+          <div class="desc"><h3>mocha latte<br>cupcakes</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.noracooks.com/vegan-brownies-recipe/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/69/7e/7b/697e7b44ec6606d1fe20cecfff4668cf.jpg">
+          <div class="desc"><h3>vegan gf<br>fudgy brownies</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://cloudykitchen.com/blog/brown-butter-cinnamon-rolls-with-brown-butter-cream-cheese-frosting/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/64/1c/ca/641ccad2b093ee4b6aa5255a4d81c880.jpg">
+          <div class="desc"><h3>brown butter cinnamon buns</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://chelsweets.com/orange-cupcakes/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/1b/94/9f/1b949f526bd730cf3337165c92c7b43f.jpg">
+          <div class="desc"><h3>zesty orange<br>curd cupcakes</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://poshlittledesigns.com/2019/01/23/how-to-make-raspberry-rose-french-madeleines/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/ac/8a/3c/ac8a3c88508eab16f281ef595976e8b4.jpg">
+          <div class="desc"><h3>raspberry rose madeleines</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://easygayoven.com/apricot-almond-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/b8/98/d4/b898d4cc1f8795e819b3c99bd14aa11f.jpg">
+          <div class="desc"><h3>lemon apricot almond cake</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://sallysbakingaddiction.com/soft-baked-white-chocolate-chip-cranberry-cookies/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/22/3d/74/223d747850d1ac40b5372cae944e15fb.jpg">
+          <div class="desc"><h3>cranberry choc chunk cookies</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://butterandbliss.net/almond-croissants/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/be/c7/8b/bec78bd8f76e72aaa74370aa4d9da47e.jpg">
+          <div class="desc"><h3>almond<br>croissants</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.nourish-and-fete.com/perfect-filled-lemon-cupcakes/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/01/6c/d4/016cd43ac1d5c4cce4c7fdea6bf82303.jpg">
+          <div class="desc"><h3>zesty lemon<br>curd cupcakes</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://food52.com/recipes/89370-sea-salt-butter-rolls">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/cd/ab/eb/cdabeb78a5c408cd40d6f7eb49f21e97.jpg">
+          <div class="desc"><h3>sea salt<br>butter crescents</h3></div>
+        </a>
+        </div>
+      </div>
+    
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://mapleetchocolat.com/greek-yogurt-lemon-loaf/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/cc/3d/30/cc3d303294e3282f07915c6d89131958.jpg">
+          <div class="desc"><h3>greek yogurt<br>lemon loaf</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.theflavorbender.com/homemade-french-croissants-step-by-step-recipe/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/b8/13/92/b81392ac125d8f446b3d40a833b7b057.jpg">
+          <div class="desc"><h3 >french<br>butter croissants</h3></div>
+        </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://buttermilkbysam.com/everyday-butter-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/01/59/20/015920392e76b8c58c0f96c68277b8d0.jpg">
+          <div class="desc"><h3>everyday simple butter cake</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://thecookiedoughdiaries.com/matcha-cookies/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/cb/da/8e/cbda8e6d3ce9ad86a4e21e143e673c0d.jpg">
+          <div class="desc"><h3>matcha choc<br>chunk cookies</h3></div>
+        </a>
+        </div>
+      </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://sallysbakingaddiction.com/lemon-blueberry-layer-cake/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/87/c6/8b/87c68b20d26c76610f3df11ee6b01d7c.jpg">
+      <div class="desc"><h3>lemon summer<br>berry cake</h3></div>
+    </a>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://bromabakery.com/orange-upside-down-cake/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/1a/71/b5/1a71b5e7f9418e3c8879f50f0468aa00.jpg">
+      <div class="desc"><h3>orange upside-<br>down cake</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+        <img class="gallery-scallop" src="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+      <div class="desc"><h3>choc walnut<br>banana bread</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.thekitchn.com/tiramisu-brownies-recipe-23698056">
+        <img id="bread" class="gallery-scallop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_3KLvzJ6fe_puLoJGYWaGezjlau2wz6lMTg&s">
+      <div class="desc"><h3>tiramisu<br>brownies</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.ricardocuisine.com/en/recipes/5901-cherry-tomato-focaccia">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/16/37/33/1637335777c325c8d44bfb178bb682a7.jpg">
+      <div class="desc"><h3>tomato<br>basil foccacia</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://zhangcatherine.com/garlic-cream-cheese-bagels/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/1f/ba/3a/1fba3a44f5f265dbe4510f0b6583be57.jpg">
+      <div class="desc"><h3> korean cheesy garlic bagels</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.recipetineats.com/cheese-garlic-crack-bread-pull-apart-bread/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/b2/23/7e/b2237e29e81d23ed7f117e1bcecd8753.jpg">
+      <div class="desc"><h3>cheesy garlic<br>herb pullapart</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://whattocooktoday.com/tangzhong-chinese-sausage-buns-hong-kong-style.html">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/75/0c/96/750c96b49f34af2c464b765b4cc8f059.jpg">
+      <div class="desc"><h3>hong kong style sausage buns</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cookiesandcups.com/cheesecake-stuffed-chocolate-chip-cookies/">
+        <img class="gallery-scallop" src="https://cookiesandcups.com/wp-content/uploads/2019/05/cheesecakecookies-4.jpg">
+      <div class="desc"><h3>cheesecake<br>stuffed cookies</h3></div>
+    </a>
+    </div>
+  </div>
+</div>
+
+<div class="bread-recipe-gallery">
+  <h2>bread</h2>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://theviewfromgreatisland.com/blackberry-sweet-rolls-recipe/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/12/53/53/1253533bd2b12fe458926b3d257d616c.jpg">
+      <div class="desc"><h3>blackberry<br>sticky buns</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.abc.net.au/news/2020-09-24/cinnamon-scrolls-with-cardamom-and-lemon-zest/12686306">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/a2/d0/1c/a2d01cb3c7ef4e0a928465f1796300ee.jpg">
+      <div class="desc"><h3>cardamom spiced cinnamon scrolls</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="matcha-cinnamon-rolls.html">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/8b/ed/4a/8bed4a462329e3372b4a9006dcd9134a.jpg">
+        <div class="desc"><h3>matcha<br>cinnamon rolls</h3></div>
+    </a>
+    </div>
+</div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cloudykitchen.com/blog/brown-butter-cinnamon-rolls-with-brown-butter-cream-cheese-frosting/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/64/1c/ca/641ccad2b093ee4b6aa5255a4d81c880.jpg">
+      <div class="desc"><h3>brown butter<br>cinnamon buns</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://mapleetchocolat.com/greek-yogurt-lemon-loaf/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/cc/3d/30/cc3d303294e3282f07915c6d89131958.jpg">
+      <div class="desc"><h3>glazed greek<br>yogurt lemon loaf</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+        <img id="cookies" class="gallery-scallop" src="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+      <div class="desc"><h3>choc chip walnut<br>banana bread</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.ricardocuisine.com/en/recipes/5901-cherry-tomato-focaccia">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/16/37/33/1637335777c325c8d44bfb178bb682a7.jpg">
+      <div class="desc"><h3>tomato basil<br>foccacia</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://zhangcatherine.com/garlic-cream-cheese-bagels/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/1f/ba/3a/1fba3a44f5f265dbe4510f0b6583be57.jpg">
+      <div class="desc"><h3> korean cheesy<br>garlic bagels</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://www.recipetineats.com/cheese-garlic-crack-bread-pull-apart-bread/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/b2/23/7e/b2237e29e81d23ed7f117e1bcecd8753.jpg">
+      <div class="desc"><h3>cheesy garlic<br>herb pullapart</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://whattocooktoday.com/tangzhong-chinese-sausage-buns-hong-kong-style.html">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/75/0c/96/750c96b49f34af2c464b765b4cc8f059.jpg">
+      <div class="desc"><h3>hong kong style<br>sausage buns</h3></div>
+    </a>
+    </div>
+  </div>
+</div>
+
+<div class="cookies-recipe-gallery">
+  <h2>cookies</h2>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://sallysbakingaddiction.com/soft-baked-white-chocolate-chip-cranberry-cookies/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/736x/22/3d/74/223d747850d1ac40b5372cae944e15fb.jpg">
+      <div class="desc"><h3>cranberry<br> chocolate chunk cookies</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://cookiesandcups.com/cheesecake-stuffed-chocolate-chip-cookies/">
+        <img class="gallery-scallop" src="https://cookiesandcups.com/wp-content/uploads/2019/05/cheesecakecookies-4.jpg">
+      <div class="desc"><h3>cheesecake-stuffed<br>choc chip cookies</h3></div>
+    </a>
+    </div>
+  </div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://thecookiedoughdiaries.com/matcha-cookies/">
+        <img class="gallery-scallop" src="https://i.pinimg.com/474x/cb/da/8e/cbda8e6d3ce9ad86a4e21e143e673c0d.jpg">
+      <div class="desc"><h3>matcha swirl<br>chocolate chunk cookies</h3></div>
+    </a>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://poshlittledesigns.com/2019/01/23/how-to-make-raspberry-rose-french-madeleines/">
+        <img id="cakes" class="gallery-scallop" src="https://i.pinimg.com/736x/ac/8a/3c/ac8a3c88508eab16f281ef595976e8b4.jpg">
+      <div class="desc"><h3 >raspberry rose<br>french madeleines</h3></div>
+    </a>
+    </div>
+  </div>
+</div>
+
+<div class="cakes-recipe-gallery">
+    <h2>cakes</h2>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://theloopywhisk.com/2018/10/14/ultimate-gluten-free-chocolate-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/4f/ae/12/4fae12d79ee7e7095d79c46273cf773b.jpg">
+          <div class="desc"><h3>gluten-free<br>chocolate cake</h3></div>
+          </a>
+        </div>
+        </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://sofiabakes.com/2018/06/11/salted-caramel-raspberry-chocolate-cupcakes/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/94/ae/f2/94aef21e0226a955fd51e5de02ee495f.jpg">
+          <div class="desc"><h3>raspberry dalgona cupcakes</h3></div>
+        </a>
+        </div>
+      </div> 
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.browneyedbaker.com/mocha-cupcakes-with-espresso-buttercream-frosting/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/02/7d/8b/027d8bb0d6b6cde8347c9ac1280e79f7.jpg">
+          <div class="desc"><h3>mocha<br>latte cupcakes</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.noracooks.com/vegan-brownies-recipe/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/69/7e/7b/697e7b44ec6606d1fe20cecfff4668cf.jpg">
+          <div class="desc"><h3>vegan<br>fudgy brownies</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://chelsweets.com/orange-cupcakes/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/1b/94/9f/1b949f526bd730cf3337165c92c7b43f.jpg">
+          <div class="desc"><h3>zesty orange<br>curd cupcakes</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://easygayoven.com/apricot-almond-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/b8/98/d4/b898d4cc1f8795e819b3c99bd14aa11f.jpg">
+          <div class="desc"><h3>lemon apricot almond cake</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.nourish-and-fete.com/perfect-filled-lemon-cupcakes/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/01/6c/d4/016cd43ac1d5c4cce4c7fdea6bf82303.jpg">
+          <div class="desc"><h3>zesty lemon<br>curd cupcakes</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://buttermilkbysam.com/everyday-butter-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/01/59/20/015920392e76b8c58c0f96c68277b8d0.jpg">
+          <div class="desc"><h3>everyday simple butter cake</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://sallysbakingaddiction.com/lemon-blueberry-layer-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/87/c6/8b/87c68b20d26c76610f3df11ee6b01d7c.jpg">
+          <div class="desc"><h3>lemon summer<br>berry cake</h3></div>
+        </a>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://bromabakery.com/orange-upside-down-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/1a/71/b5/1a71b5e7f9418e3c8879f50f0468aa00.jpg">
+          <div class="desc"><h3>orange upside-<br>down cake</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.thekitchn.com/tiramisu-brownies-recipe-23698056">
+            <img class="gallery-scallop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_3KLvzJ6fe_puLoJGYWaGezjlau2wz6lMTg&s">
+          <div class="desc"><h3>tiramisu<br>brownies</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://poshlittledesigns.com/2019/01/23/how-to-make-raspberry-rose-french-madeleines/">
+            <img id="pastries" class="gallery-scallop" src="https://i.pinimg.com/736x/ac/8a/3c/ac8a3c88508eab16f281ef595976e8b4.jpg">
+          <div class="desc"><h3>raspberry rose madeleines</h3></div>
+        </a>
+        </div>
+      </div>
+</div>
+
+<div class="pastries-recipe-gallery">
+    <h2>pastries</h2>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.stetted.com/copycat-starbucks-sugar-plum-cheese-danish/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/05/7c/87/057c87840959433099b780b655b389c7.jpg">
+          <div class="desc"><h3>sugarplum<br>cheese danishes</h3></div>
+        </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://teakandthyme.com/mini-lemon-meringue-tarts/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/75/45/57/754557ed3d5d882e10ea056be66ccbb5.jpg">
+          <div class="desc"><h3>mini lemon<br>meringue tartlets</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://butterandbliss.net/almond-croissants/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/be/c7/8b/bec78bd8f76e72aaa74370aa4d9da47e.jpg">
+          <div class="desc"><h3>classic<br>almond croissants</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://food52.com/recipes/89370-sea-salt-butter-rolls">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/cd/ab/eb/cdabeb78a5c408cd40d6f7eb49f21e97.jpg">
+          <div class="desc"><h3>sea salt<br>butter crescents</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.theflavorbender.com/homemade-french-croissants-step-by-step-recipe/">
+            <img id="gf" class="gallery-scallop" src="https://i.pinimg.com/736x/b8/13/92/b81392ac125d8f446b3d40a833b7b057.jpg">
+          <div class="desc"><h3>french<br>butter croissants</h3></div>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="gf-recipe-gallery">
+    <h2>gluten free</h2>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://theloopywhisk.com/2018/10/14/ultimate-gluten-free-chocolate-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/4f/ae/12/4fae12d79ee7e7095d79c46273cf773b.jpg">
+          <div class="desc"><h3>gluten-free<br>chocolate cake</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.noracooks.com/vegan-brownies-recipe/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/69/7e/7b/697e7b44ec6606d1fe20cecfff4668cf.jpg">
+          <div class="desc"><h3>vegan fudgy brownies</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://easygayoven.com/apricot-almond-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/b8/98/d4/b898d4cc1f8795e819b3c99bd14aa11f.jpg">
+          <div class="desc"><h3>lemon apricot almond cake</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+            <img id="vegan" class="gallery-scallop" src="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+          <div class="desc"><h3>choc chip banana bread</h3></div>
+        </a>
+        </div>
+      </div>
+</div>
+
+<div class="vegan-recipe-gallery">
+    <h2>vegan</h2>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.noracooks.com/vegan-brownies-recipe/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/69/7e/7b/697e7b44ec6606d1fe20cecfff4668cf.jpg">
+          <div class="desc"><h3>vegan<br>fudgy brownies</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.ricardocuisine.com/en/recipes/5901-cherry-tomato-focaccia">
+            <img class="gallery-scallop" src="https://i.pinimg.com/736x/16/37/33/1637335777c325c8d44bfb178bb682a7.jpg">
+          <div class="desc"><h3>cherry tomato<br>basil foccacia</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+            <img class="gallery-scallop" src="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg">
+          <div class="desc"><h3>chocolate chip<br>walnut banana bread</h3></div>
+        </a>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://bromabakery.com/orange-upside-down-cake/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/1a/71/b5/1a71b5e7f9418e3c8879f50f0468aa00.jpg">
+          <div class="desc"><h3>orange upside-down<br>olive oil cake</h3></div>
+        </a>
+        </div>
+      </div>
+    </div>
+  <div class="clearfix"></div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-info">
+      <a href="index.html"><img src="https://i.pinimg.com/736x/87/ca/c0/87cac0c18d312627d65f950f2bf81726.jpg"></a>
+      <h2>Athena Chao<br>125-achao@sd43.bc.ca<br>© 2030 flour power</h2>
+  </div>
+</footer>
+</html>

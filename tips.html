@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>flour power</title>
+        <link rel="stylesheet"  type="text/css" href="stylesheet.css">
+        <script type="text/javascript" src="myscripts.js"></script>
+    </head>
+
+    <body>
+
+    <div class="scallop"><img src="https://i.pinimg.com/736x/ea/ed/64/eaed645d466d786c1af4219a49223eb0.jpg"></div>
+
+    <div class="after-scallop">
+
+    <nav class="navbar">
+        <h2>
+        <ul class="nav-list">
+        <li><a class="active" href="index.html">home</a></li>
+        <div class="dropdown">
+        <li><a class="dropbtn" href="recipes.html">all recipes
+            </a></li>
+            <div class="dropdown-content">
+                <a href="recipes.html#bread">bread</a>
+                <a href="recipes.html#cookies">cookies</a>
+                <a href="recipes.html#cakes">cakes</a>
+                <a href="recipes.html#pastries">pastries</a>
+                <a href="recipes.html#gf">gluten free</a>
+                <a href="recipes.html#vegan">vegan</a>
+            </div>
+            </div>
+        <div class="dropdown">
+        <li><a class="dropbtn" href="tips.html">tips & tricks
+            </a></li>
+            <div class="dropdown-content">
+                <a href="tips.html#substitutions">substitutions</a>
+                <a href="tips.html#techniques">techniques</a>
+            </div>
+            </div>
+        <li><a href="about.html">about</a></li>
+        </ul>
+        </h2>
+    </nav>
+</div>
+
+<script>
+    window.onscroll = function() {requestAnimationFrame(stickyAfterScallop)};
+    
+    var afterScallop = document.querySelector(".after-scallop");  
+    function stickyAfterScallop() {
+        
+        if (!afterScallop) return;  
+    
+        var afterScallopPosition = afterScallop.getBoundingClientRect().top;
+        var scrollY = window.scrollY || window.pageYOffset;  
+    
+        if (scrollY === 0 ) {
+            afterScallop.classList.remove("sticky"); 
+    
+        } else if (afterScallopPosition <= 0) {
+            afterScallop.classList.add("sticky");  
+    
+        } else {
+            afterScallop.classList.remove("sticky");  
+        }
+    }
+</script>
+
+<div class="tips-parallax"> <!--parallax background-->
+<div class="tips-gallery">
+    <h2 id="substitutions">tips & tricks</h2>
+    <p>quick and easy hacks that will save you a trip to the grocery store!</p>
+    
+    <div class="tips-substitutions">
+    <!--substitutions gallery-->
+        <h2>substitutions</h2>
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://sallysbakingaddiction.com/buttermilk-substitute/">
+                <div class="desc"><h3>buttermilk<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.thepioneerwoman.com/food-cooking/cooking-tips-tutorials/g35282914/sour-cream-substitute/">
+                <div class="desc"><h3>sour cream<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://sallysbakingaddiction.com/cake-flour-substitute/">
+                <div class="desc"><h3>cake flour<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://breadbythehour.com/how-to-turn-all-purpose-flour-into-bread-flour/">
+                <div class="desc"><h3>bread flour<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.bbcgoodfood.com/health/special-diets/best-egg-substitutions/">
+                <div class="desc"><h3>egg vegan<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.healthline.com/nutrition/gluten-free-flours">
+                <div class="desc"><h3>gf flour<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://oneingredientchef.com/how-to-substitute-oil/">
+                <div class="desc"><h3>oil<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.food.com/recipe/unsweetened-baking-chocolate-substitute-188761">
+                <div class="desc"><h3>chocolate<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.realsimple.com/food-recipes/shopping-storing/food/brown-sugar-substitutes">
+                <div class="desc"><h3>brown sugar<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.epicurious.com/ingredients/baking-powder-substitute">
+                <div class="desc"><h3>baking powder<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a target="_blank" href="https://www.allrecipes.com/article/baking-soda-substitute/">
+                <div class="desc"><h3>baking soda<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery-tips">
+              <a id="techniques" target="_blank" href="https://www.healthline.com/nutrition/cream-of-tartar-substitutes">
+              <div class="desc"><h3>cream of tartar<br>substitute</h3></div>
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="techniques-gallery">
+    <h2>techniques</h2>
+    <!--techniques gallery-->
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.kingarthurbaking.com/blog/2022/04/08/how-to-make-butter-at-home">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/65/aa/c9/65aac9b570690225b622404c87d08116.jpg">
+          <div class="desc"><h3>how to make<br>fresh butter</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://minimalistbaker.com/how-to-make-a-flax-egg/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/91/c6/8c/91c68c3a87b4a3351a4b2c66c5033f40.jpg">
+          <div class="desc"><h3>how to make<br>a flax egg</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://sallysbakingaddiction.com/how-to-brown-butter/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/70/6e/09/706e0938c636ef5c342fe82c7b476288.jpg">
+          <div class="desc"><h3>how to make<br>brown butter</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://www.loveandlemons.com/how-to-make-powdered-sugar/">
+            <img class="gallery-scallop" src="https://i.pinimg.com/474x/4c/fd/e4/4cfde4407480048bbf7b412144fbd87d.jpg">
+          <div class="desc"><h3>how to make<br>icing sugar</h3></div>
+          </a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    </div>
+</div>
+</div>
+
+<footer class="footer">
+    <div class="footer-info">
+        <a href="index.html"><img src="https://i.pinimg.com/736x/87/ca/c0/87cac0c18d312627d65f950f2bf81726.jpg"></a>
+        <h2>Athena Chao<br>125-achao@sd43.bc.ca<br>© 2030 flour power</h2>
+    </div>
+</footer>
+

@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>flour power</title>
+        <link rel="stylesheet"  type="text/css" href="stylesheet.css">
+        <script type="text/javascript" src="myscripts.js"></script>
+    </head>
+    <body>
+        <!--initial logo-->
+        <div class="scallop"><img src="https://i.pinimg.com/736x/ea/ed/64/eaed645d466d786c1af4219a49223eb0.jpg"></div> 
+        <div class="after-scallop">  
+    <!--sticky navbar-->
+    <nav class="navbar">
+        <h2>
+        <ul class="nav-list">
+        <li><a class="active" href="index.html">home</a></li>
+        <div class="dropdown">
+        <li><a class="dropbtn" href="recipes.html">all recipes
+            </a></li>
+            <div class="dropdown-content">
+                <a href="recipes.html#bread">bread</a> <!--brings you to specific part of recipe page-->
+                <a href="recipes.html#cookies">cookies</a>
+                <a href="recipes.html#cakes">cakes</a>
+                <a href="recipes.html#pastries">pastries</a>
+                <a href="recipes.html#gf">gluten free</a>
+                <a href="recipes.html#vegan">vegan</a>
+            </div>
+            </div>
+        <div class="dropdown">
+        <li><a class="dropbtn" href="tips.html">tips & tricks
+            </a></li>
+
+            <div class="dropdown-content">
+                <a href="tips.html#substitutions">substitutions</a>
+                <a href="tips.html#techniques">techniques</a>
+            </div>
+            </div>
+        <li><a href="about.html">about</a></li>
+        </ul>
+        </h2>
+    </nav>
+</div>
+
+<!--sticky navbar code-->
+<script>
+window.onscroll = function() {requestAnimationFrame(stickyAfterScallop)};
+
+var afterScallop = document.querySelector(".after-scallop");  
+function stickyAfterScallop() {
+    
+    if (!afterScallop) return;  
+
+    var afterScallopPosition = afterScallop.getBoundingClientRect().top;
+    var scrollY = window.scrollY || window.pageYOffset;  
+
+    if (scrollY === 0 ) {
+        afterScallop.classList.remove("sticky"); 
+
+    } else if (afterScallopPosition <= 0) {
+        afterScallop.classList.add("sticky");  
+
+    } else {
+        afterScallop.classList.remove("sticky");  
+    }
+}
+</script>
+
+<!--parallax image and slideshow recipes-->
+<div class="parallax">
+    <div class="main">
+        <div class="mySlides">
+            <div class="front-page-recipe">
+                <div class="front-page-recipe-text">
+                <h2 class="JUST-IN">JUST IN</h2>
+                <a href="https://sallysbakingaddiction.com/lemon-blueberry-layer-cake/">
+                <h1>lemon <br> summer berry <br> layer cake</h1>
+                <h2 class="main-recipe-desc">layers of zesty lemon chiffon, <br> tart mixed berry compote, and a whipped <br> lemon cream cheese frosting</h2>
+                </div>
+                <div class="image-container-front">
+                    <img class="image" src="https://i.pinimg.com/736x/87/c6/8b/87c68b20d26c76610f3df11ee6b01d7c.jpg">
+                    <div class="middle">
+                        <div class="text"><h2>READ<br>NOW</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="front-page-recipe">
+                <div class="front-page-recipe-text">
+                <h2 class="JUST-IN">JUST IN</h2>
+                <a href="matcha-cinnamon-rolls.html">
+                <h1>matcha <br> cinnamon <br> rolls</h1>
+                <h2 class="main-recipe-desc">pillowy cinnamon rolls <br> with gooey cinnamon filling and <br> matcha cream cheese frosting</h2>
+                </div>
+                <div class="image-container-front">
+                    <img class="image" src="https://i.pinimg.com/736x/8b/ed/4a/8bed4a462329e3372b4a9006dcd9134a.jpg">
+                    <div class="middle">
+                        <div class="text"><h2>READ<br>NOW</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="front-page-recipe">
+                <div class="front-page-recipe-text">
+                <h2 class="JUST-IN">JUST IN</h2>
+                <a href="https://butterandbliss.net/almond-croissants/">
+                <h1>classic <br> almond <br> croissants</h1>
+                <h2 class="main-recipe-desc">flaky croissant pastry, <br> rich and velvety frangipane, <br> a soft crunch of sliced almonds</h2>
+                </div>
+                <div class="image-container-front">
+                    <img class="image" src="https://i.pinimg.com/474x/be/c7/8b/bec78bd8f76e72aaa74370aa4d9da47e.jpg">
+                    <div class="middle">
+                        <div class="text"><h2>READ<br>NOW</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="front-page-recipe">
+                <div class="front-page-recipe-text">
+                <h2 class="JUST-IN">JUST IN</h2>
+                <a href="https://bromabakery.com/orange-upside-down-cake/">
+                <h1>orange <br> upside-down <br> olive oil cake</h1>
+                <h2 class="main-recipe-desc">sweet, tangy, and bright <br> caramelized citrus on a <br> decadant olive oil cake</h2>
+                </div>
+                <div class="image-container-front">
+                    <img class="image" src="https://i.pinimg.com/474x/1a/71/b5/1a71b5e7f9418e3c8879f50f0468aa00.jpg">
+                    <div class="middle">
+                        <!--read now hover detail--> <div class="text"><h2>READ<br>NOW</h2></div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <!--slideshow code-->
+        <script>
+            var slideIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+            }
+              slideIndex++;
+              if (slideIndex > x.length) {slideIndex = 1} 
+
+              x[slideIndex-1].style.display = "block"; 
+              setTimeout(carousel, 2000); 
+            }
+            </script>
+
+</div>
+            
+    <div class="suggestions">
+        <!--suggestions-->
+        <div class="suggestions-group">    
+            <h2 class="popular">popular recipes</h2>
+            <p class="popular">guaranteed to be family favourites</p>
+            <ul>
+                <li>
+                    <figure>
+                        <a href="https://somethingnutritiousblog.com/chocolate-chip-walnut-banana-bread/"><img src="https://bromabakery.com/wp-content/uploads/2020/02/chocolate-chip-banana-bread.jpg"></a>
+                        <figcaption><a href="https://somethingnutritiousblog.com/chocolate-chip-walnut-banana-bread/">gf chocolate<br>chip walnut<br>banana bread</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="https://mapleetchocolat.com/greek-yogurt-lemon-loaf/"><img src="https://i.pinimg.com/474x/cc/3d/30/cc3d303294e3282f07915c6d89131958.jpg"></a>
+                        <figcaption><a href="https://mapleetchocolat.com/greek-yogurt-lemon-loaf/">glazed<br>greek yogurt<br>lemon loaf</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="https://www.thekitchn.com/tiramisu-brownies-recipe-23698056"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_3KLvzJ6fe_puLoJGYWaGezjlau2wz6lMTg&s"></a>
+                        <figcaption><a href="https://www.thekitchn.com/tiramisu-brownies-recipe-23698056">fudgy tiramisu<br>espresso<br>brownies</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="https://www.abc.net.au/news/2020-09-24/cinnamon-scrolls-with-cardamom-and-lemon-zest/12686306"><img src="https://i.pinimg.com/474x/a2/d0/1c/a2d01cb3c7ef4e0a928465f1796300ee.jpg"></a>
+                        <figcaption><a href="https://www.abc.net.au/news/2020-09-24/cinnamon-scrolls-with-cardamom-and-lemon-zest/12686306">classic<br>spiced cinnamon<br>scrolls</a></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="https://cookiesandcups.com/cheesecake-stuffed-chocolate-chip-cookies/"><img src="https://cookiesandcups.com/wp-content/uploads/2019/05/cheesecakecookies-4.jpg"></a>
+                        <figcaption><a href="https://cookiesandcups.com/cheesecake-stuffed-chocolate-chip-cookies/">cheesecake<br>stuffed choc chip<br>cookies</a></figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+
+<!--website about section, brings you to the about page on learn more-->
+<div class="about-parallax">
+    <div class="about-parallax-text">
+        <div class="center-about-parallax-inside">
+        <div class="about-parallax-text-inside">
+        <h2>ABOUT FLOUR POWER</h2>
+        <p><br>flour power is a baking blog website that focuses on easy, delicious recipes. <br> my goal is to share recipes with others to spread love through baking!</p>
+        <p>i hope you and your loved ones enjoy and cherish these recipes as much as i do!<br><br>love,<br>Athena</p>
+        </div>
+        <a href="about.html"><div class="learn-more-button"><h3>learn<br>more</h3></div></a>
+        </div>
+    </div>
+</div>
+
+<!--suggestions-->
+    <div class="suggestions-group">
+        <h2>citrus season is here!</h2>
+        <p>with spring arriving, here are some bright, tart, and tangy recipes that are perfect for any occasion!</p>
+        <ul>
+            <li>
+                <figure>
+                    <a href="https://bromabakery.com/orange-upside-down-cake/"><img src="https://i.pinimg.com/474x/1a/71/b5/1a71b5e7f9418e3c8879f50f0468aa00.jpg"></a>
+                    <figcaption><a href="https://bromabakery.com/orange-upside-down-cake/">orange<br>upside-down<br>olive oil cake</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://teakandthyme.com/mini-lemon-meringue-tarts/"><img src="https://i.pinimg.com/474x/75/45/57/754557ed3d5d882e10ea056be66ccbb5.jpg"></a>
+                    <figcaption><a href="https://teakandthyme.com/mini-lemon-meringue-tarts/">mini lemon<br>meringue<br>tartlets</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://mapleetchocolat.com/greek-yogurt-lemon-loaf/"><img src="https://i.pinimg.com/474x/8d/fb/0a/8dfb0ab3f2d2fb3215e4e40a6a50054b.jpg"></a>
+                    <figcaption><a href="https://mapleetchocolat.com/greek-yogurt-lemon-loaf/">glazed<br>greek yogurt<br>lemon loaf</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://sallysbakingaddiction.com/lemon-blueberry-layer-cake/"><img src="https://i.pinimg.com/736x/87/c6/8b/87c68b20d26c76610f3df11ee6b01d7c.jpg"></a>
+                    <figcaption><a href="https://sallysbakingaddiction.com/lemon-blueberry-layer-cake/">lemon<br>summer berry<br>layer cake</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://www.nourish-and-fete.com/perfect-filled-lemon-cupcakes/"><img src="https://i.pinimg.com/474x/01/6c/d4/016cd43ac1d5c4cce4c7fdea6bf82303.jpg"></a>
+                    <figcaption><a href="https://www.nourish-and-fete.com/perfect-filled-lemon-cupcakes/">zesty<br>lemon curd<br>chiffon cupcakes</a></figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+
+    <!--browse different recipe kinds, brings you to specific location on recipe page-->
+<div class="browse-parallax"> 
+<div class="browse-types" style="width:100%"><h2>browse by type</h2>
+    <div class="browse-buttons">
+        <button style="width:16%"><a href="recipes.html#bread">bread</a></button>
+        <button style="width:16%"><a href="recipes.html#cookies">cookies</a></button>
+        <button style="width:16%"><a href="recipes.html#cakes">cakes</a></button>
+        <button style="width:16%"><a href="recipes.html#pastries">pastries</a></button>
+        <button style="width:16%"><a href="recipes.html#gf">gluten free</a></button>
+        <button style="width:16%"><a href="recipes.html#vegan">vegan</a></button>
+    </div>
+</div>
+</div>      
+
+<!--suggestions-->
+    <div class="suggestions-group">
+        <h2>savoury recipes</h2>
+        <p>if you're looking for something a little more savoury</p>
+        <ul>
+            <li>
+                <figure>
+                    <a href="https://www.ricardocuisine.com/en/recipes/5901-cherry-tomato-focaccia"><img src="https://i.pinimg.com/736x/16/37/33/1637335777c325c8d44bfb178bb682a7.jpg"></a>
+                    <figcaption><a href="https://www.ricardocuisine.com/en/recipes/5901-cherry-tomato-focaccia"><em>cherry</em> tomato<br>& basil<br>focaccia</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://zhangcatherine.com/garlic-cream-cheese-bagels/"><img src="https://i.pinimg.com/474x/1f/ba/3a/1fba3a44f5f265dbe4510f0b6583be57.jpg"></a>
+                    <figcaption><a href="https://zhangcatherine.com/garlic-cream-cheese-bagels/">korean<br>cream cheese<br>garlic bagel</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://food52.com/recipes/89370-sea-salt-butter-rolls"><img src="https://i.pinimg.com/474x/cd/ab/eb/cdabeb78a5c408cd40d6f7eb49f21e97.jpg"></a>
+                    <figcaption><a href="https://food52.com/recipes/89370-sea-salt-butter-rolls">japanese<br>sea salt butter<br>crescents</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://www.recipetineats.com/cheese-garlic-crack-bread-pull-apart-bread/"><img src="https://i.pinimg.com/736x/b2/23/7e/b2237e29e81d23ed7f117e1bcecd8753.jpg"></a>
+                    <figcaption><a href="https://www.recipetineats.com/cheese-garlic-crack-bread-pull-apart-bread/">cheesy<br>garlic herb<br>pullapart</a></figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="https://whattocooktoday.com/tangzhong-chinese-sausage-buns-hong-kong-style.html"><img src="https://i.pinimg.com/474x/75/0c/96/750c96b49f34af2c464b765b4cc8f059.jpg"></a>
+                    <figcaption><a href="https://whattocooktoday.com/tangzhong-chinese-sausage-buns-hong-kong-style.html">hong kong<br>bakery-style<br>sausage buns</a></figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-info">
+        <a href="index.html"><img src="https://i.pinimg.com/736x/87/ca/c0/87cac0c18d312627d65f950f2bf81726.jpg"></a>
+        <h2>Athena Chao<br>125-achao@sd43.bc.ca<br>© 2030 flour power</h2>
+    </div>
+</footer>
+
+</body>
+
+</html>
